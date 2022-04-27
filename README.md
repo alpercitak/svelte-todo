@@ -8,4 +8,4 @@ yarn dev
 ```
 
 live version
-https://svelte-todo-lake.vercel.app/
+https://svelte-todo-alpercitak.vercel.app
