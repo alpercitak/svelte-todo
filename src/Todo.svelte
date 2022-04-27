@@ -4,7 +4,9 @@
 
     let text;
 
-    function handleAdd() {
+    const handleAdd = () => {
+        if (!text) return {};
+
         $items = [
             ...$items,
             {
@@ -13,22 +15,24 @@
             },
         ];
         text = null;
-    }
+    };
 
-    function handleRemove(id) {
+    const onKeyPress = (e) => {
+        if (e.charCode === 13) handleAdd();
+    };
+    const handleRemove = (id) => {
         $items = $items.filter((t) => t.id != id);
-    }
+    };
 </script>
 
 <div>
-    <input bind:value={text} />
-    <button on:click={handleAdd}>+</button>
-    <div>{text || ""}</div>
+    <input bind:value={text} placeholder="todo" on:keypress={onKeyPress} />
+    <button on:click={handleAdd} disabled={!text} title="Add">+</button>
 </div>
 
 <div>
     {#each $items as item}
         <input disabled value={item.text} />
-        <button on:click={handleRemove(item.id)}>-</button>
+        <button on:click={handleRemove(item.id)} title="Remove">-</button>
     {/each}
 </div>
