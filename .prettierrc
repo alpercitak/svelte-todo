@@ -4,5 +4,8 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "semi": true
+  "semi": true,
+  "svelteAllowShorthand": true,
+  "svelteStrictMode": false,
+  "svelteBracketNewLine": false
 }
