@@ -47,8 +47,7 @@
   <input
     placeholder="todo"
     bind:value={text}
-    on:keydown={(e) => e.key === 'Enter' && handleAdd()}
-  />
+    on:keydown={(e) => e.key === 'Enter' && handleAdd()} />
   <button on:click={handleAdd} disabled={!text} title="Add">+</button>
 </div>
 

@@ -11,7 +11,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "sirv-cli": "^2.0.0",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-svelte3": "^4.0.0",
     "prettier": "^2.7.0",
     "prettier-plugin-svelte": "^2.7.0",
     "rollup": "^2.3.4",
